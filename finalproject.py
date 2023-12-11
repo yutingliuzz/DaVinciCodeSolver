@@ -10,7 +10,7 @@ NUMBER_SIZE = 0.8 * card_WIDTH
 DECK_POS = [640, 80]
 player_numbers = 2
 # please change human_test to True if you want to play
-human_test = True
+human_test = False
 # total number of rounds already run
 total_games = 0
 # total number of rounds you want to run
