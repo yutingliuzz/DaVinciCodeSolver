@@ -2,11 +2,13 @@
 
 This is the implementation of The Da Vinci Code Solver by using heuristic search algorithm against human player or baseline player (a random algorithm).
 
+**Rule of DaVinci Code:** If you are interested in playing this game, this video explains the rule well: https://www.youtube.com/watch?v=r6YLxydozxw
+
 **Experiment Setup:**
 
 **Game interface:** CodeSkulptor (https://py2.codeskulptor.org/) Just copy and paste the codes in *finalproject.py* file to CodeSkulptor and click run button. 
 
-Then the game interface will automatically show up and the game will start immediately without any other operations.
+Then the game interface will automatically show up and the game will start immediately without any other operations. 
 
 **Baseline solver VS. Heuristic solver:** The baseline solver's cards will be marked by card numbers. When the game finishes, if the interface displays "Heuristic Wins", it means the baseline solver loses on that round. The number of rounds that will be tested in total is defined in global variable *max_games*.
 
