@@ -1,17 +1,22 @@
 import simplegui
 import random
 
-# global variences
+# global variables
 WIDTH = 800
 HEIGHT = 500
 card_WIDTH = 40
 card_HEIGHT = 1.6 * card_WIDTH
 NUMBER_SIZE = 0.8 * card_WIDTH
 DECK_POS = [640, 80]
-total_games = 0
-max_games = 5  # set the max_games by changing the number
-loss_count = 0  # loss count of the random algorithm
 player_numbers = 2
+# please change human_test to True if you want to play
+human_test = True
+# total number of rounds already run
+total_games = 0
+# total number of rounds you want to run
+max_games = 2
+# number of loss from baseline player or you
+loss_count = 0
 
 
 class Message:
@@ -219,6 +224,7 @@ def new_game():
     global known_list, unknown_list, can_deal, can_guess, process_flag
     global inturn_message, guess_message, hint_message
     global player_inturn
+
     global total_games, loss_count
     total_games += 1
 
@@ -267,6 +273,9 @@ def new_game():
 
     first_player = (player_numbers-players[0].get_order()) % (player_numbers)
     player_inturn = players[first_player]
+
+    if human_test & first_player > 0:  # determine whether the first player is human player
+        can_deal = [False, True]
 
     for player in players:
         # draw three cards at the beginning of the game
@@ -350,7 +359,7 @@ def out_process(player):
 
                 player_alive_numbers -= 1
                 if player_alive_numbers == 1:
-                    hint_message.change_information('Random Wins!')
+                    hint_message.change_information('Heuristic Loses!')
                     timer2.start()
                 print 'player_alive_numbers: '+str(player_alive_numbers)
                 if players[i].get_order() != player_alive_numbers:
@@ -496,8 +505,18 @@ def time_handler1():
     global player_inturn
     timer1.stop()
 
+    if human_test & player_inturn.human:
+        can_deal[0] = True
+        can_deal[1] = False
+        inturn_message.change_pos(
+            (players[0].pos[0]-90, players[0].pos[1]+card_HEIGHT*0.5))
+        if len(deck) > 1:
+            hint_message.change_information(' Please deal')
+            # click button to deal
+        else:
+            deal_handler()
     # the baseline solver's turn
-    if player_inturn.human:
+    elif player_inturn.human:
         silly_process(player_inturn, player_inturn.next_p)
         timer1.start()
     # the heuristic solver's turn
