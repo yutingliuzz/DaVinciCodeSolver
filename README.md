@@ -32,7 +32,7 @@ When "Please guess" is displayed on the interface, select the card on the opposi
 
 The winning rate of Heuristic Solver when it plays against Baseline Solver: around 100%.
 
-The winning rate of Heuristic Solver when it plays against Baseline Solver: still testing and will be updated in final report.
+The winning rate of Heuristic Solver when it plays against Human Solver: Still testing and will be updated in final report.
 
 **Credits:**
 This project makes use of the design of the interface for The Da Vinci Code game from https://github.com/hello-world-zsp/The-Da-Vinci-Code-Board-Game/tree/master
