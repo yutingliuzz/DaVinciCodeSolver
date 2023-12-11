@@ -7,8 +7,8 @@ This is the implementation of The Da Vinci Code Solver by using heuristic search
 In our game interface, the row with card value on the top is Baseline Solver or Human Player; the row without card value on the top is the Heuristic Solver.
 <img width="1020" alt="Screenshot 2023-12-11 at 17 12 07" src="https://github.com/yutingliuzz/DaVinciCodeSolver/assets/93453827/1972326f-6d82-414d-88fd-70fd2ec71f3c">
 
-They play against each other alternatively. If the value is revealed due to correct guess, the value will appear on the card. 
-In the graph below, the Heuristic solver guess the value of the chosen card successfully, so the value is revealed and appear on the card. 
+They play against each other alternatively. If the value of a specific is revealed due to correct guess from the opposite side, the value will appear on the card. 
+In the graph below, the Heuristic solver guesses the value of the chosen card successfully, so the value is revealed and appear on the card. 
 <img width="1049" alt="Screenshot 2023-12-11 at 17 10 41" src="https://github.com/yutingliuzz/DaVinciCodeSolver/assets/93453827/7672dfa5-8619-40d5-aee6-48247c343197">
 
 
