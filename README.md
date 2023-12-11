@@ -31,6 +31,7 @@ When "Please guess" is displayed on the interface, select the card on the opposi
 **Results:**
 
 The winning rate of Heuristic Solver when it plays against Baseline Solver: around 100%.
+
 The winning rate of Heuristic Solver when it plays against Baseline Solver: still testing and will be updated in final report.
 
 **Credits:**
